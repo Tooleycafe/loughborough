@@ -150,6 +150,38 @@
         display: none;
     }
 
+    .christmas {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b22222; /* Festive red color */
+    background-color: #fffafa; /* Snowy white background */
+    border: 2px dashed #008000; /* Green dashed border for a festive look */
+    padding: 10px 15px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    }   
+
+    .christmas a {
+        text-decoration: none; /* Remove underline from link */
+        color: inherit; /* Use the same color as the parent element */
+    }
+
+    .christmas:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        background-color: #ffe4e1; /* Light red background on hover */
+    }
+
+    .christmas:hover a {
+        color: #800000; /* Darker red color on hover */
+    }
+
+
+
     /* Footer */
     footer {
         background-color: #333;
@@ -311,8 +343,12 @@
             </tr>
         </table>
     </div>
+    <div class="christmas">
+        <a href="Christmas/christmas_opening_times.pdf">Click here to view our Christmas holiday opening hours</a>
+        </div>
 </div>
 </div>
+
 
 <!-- Footer -->
 <footer>
