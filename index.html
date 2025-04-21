@@ -5,6 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="images/logos/icon/Tooley-logo.ico" type="image/x-icon">
+<meta name="keywords" content="Tooley Cafe, breakfast, buffet, Loughborough, catering">
+<meta name="author" content="Tooley Cafe">
+<meta property="og:description" content="Experience delicious breakfast and lunch options at Tooley Cafe in Loughborough. Enjoy freshly prepared meals, along with our buffet services for special events. Visit us today!">
+<meta property="og:image" content="images/logos/icon/Tooley-logo.ico">
+<meta property="og:url" content="https://tooleycafe.github.io/loughborough/">
+<meta name="description" content="Experience delicious breakfast and lunch options at Tooley Cafe in Loughborough. Enjoy freshly prepared meals, along with our buffet services for special events. Visit us today!">
+<meta content="Toolet Cafe" property="og:title">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -137,6 +144,74 @@ h1 {
     overflow: hidden; /* Ensures the image stays within the rounded corners */
   }
 
+
+/* Buffet Promo Section */
+.buffet-promo-section {
+    background-color: #fff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buffet-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.buffet-text {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buffet-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.buffet-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.buffet-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.buffet-btn:hover {
+    background-color: #444;
+}
+
+.buffet-image {
+    flex: 1;
+    min-height: 300px;
+}
+
+.buffet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 /* Footer */
 footer {
     background-color: #333;
@@ -189,6 +264,21 @@ footer a:hover {
     }
   }
 
+  /* Responsive Design */
+@media (max-width: 800px) {
+    .buffet-container {
+        flex-direction: column;
+    }
+
+    .buffet-text, .buffet-image {
+        padding: 30px;
+    }
+
+    .buffet-text h2 {
+        font-size: 2rem;
+    }
+}
+
 
 
 </style>
@@ -204,7 +294,8 @@ footer a:hover {
       <a href="#menu" class="w3-bar-item w3-button"><i class="fa fa-cutlery"></i> MENU</a>
       <a href="location.html" class="w3-bar-item w3-button"><i class="fa fa-map-marker"></i> LOCATION</a>
       <a href="#Hours" class="w3-bar-item w3-button"><i class="fa fa-clock-o"></i> OPEN HOURS</a>
-      <a href="#Just-Eat" class="w3-bar-item w3-button"><i class="fa fa-shopping-bag"></i> Order Online</a>
+      <a href="#Just-Eat" class="w3-bar-item w3-button"><i class="fa fa-shopping-bag"></i> ORDER ONLINE</a>
+      <a href="buffet.html" class="w3-bar-item w3-button"><i class="fa fa-group"></i> BUFFET</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> OUR WORK</a>
       <a href="about.html" class="w3-bar-item w3-button"><i class="fa fa-building"></i> ABOUT US</a>
       <a href="Contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -224,7 +315,8 @@ footer a:hover {
   <a href="#menu" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-cutlery"></i> MENU</a>
   <a href="location.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-map-marker"></i> LOCATION</a>
   <a href="#Hours" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-clock-o"></i> OPEN HOURS</a>
-  <a href="#Just-Eat" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-shopping-bag"></i> Order Online</a>
+  <a href="#Just-Eat" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-shopping-bag"></i> ORDER ONLINE</a>
+  <a href="buffet.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-group"></i> BUFFET</a>
   <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> OUR WORK</a>
   <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button"> <i class="fa fa-building"></i> ABOUT US</a>
   <a href="Contact.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -262,11 +354,12 @@ footer a:hover {
 <br>
 
 <!-- Promo Section - "Opening Hours" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="Hours">
+<div class="w3-container w3-light-grey" style="padding:40px 16px" id="Hours">
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Opening Hours.</h3>
       <p>To view our opening and closing hours, please click the button below.</p>
+      <br>
       <p><a href="times.html" class="w3-button w3-black"><i class="fa fa-clock-o"> </i> View our Opening Hours</a></p>
     </div>
     <div class="w3-col m6">
@@ -276,20 +369,36 @@ footer a:hover {
 </div>
 
 
-
 <!-- Promo Section - "Order Online - Just Eat" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="Just-Eat">
+<div class="w3-container w3-light-grey" style="padding:110px 16px" id="Order-Direct">
   <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <img class="rounded-image" src="images/Food/just-eat.jpeg" alt="Order Online" width="450" height="350">
+    </div>
     <div class="w3-col m6">
       <h3>Order Online.</h3>
       <p>You can order online with Just Eat, please click the button below.</p>
+      <br>
       <p><a href="https://www.just-eat.co.uk/restaurants-tooleys-cafe-loughborough-university/menu" class="w3-button w3-black"><i class="fa fa-shopping-bag"> </i> Order Online - Just Eat</a></p>
-    </div>
-    <div class="w3-col m6">
-      <img class="rounded-image" src="images/Food/just-eat.jpeg" alt="Buildings" width="450" height="350">
     </div>
   </div>
 </div>
+
+
+<!-- Buffet Promotion Section -->
+<section class="buffet-promo-section">
+  <div class="buffet-container">
+    <div class="buffet-text">
+      <h2>Your Buffet Awaits</h2>
+      <p>Whether it’s a birthday, corporate event, or family get-together, Tooley Cafe provides a fresh and tasty buffet experience tailored to your needs.</p>
+      <p><a href="buffet.html" class="w3-button w3-black"><i class="fa fa-group"> </i>Explore Our Buffet</a></p>
+    </div>
+    <div class="buffet-image">
+      <img src="images/buffet/buffet1.jpg" alt="Buffet Preview">
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Work Section -->
@@ -347,7 +456,7 @@ footer a:hover {
         <a href="https://www.facebook.com/profile.php?id=61571514148466" class="w3-button w3-black"><i class="fa fa-facebook-official"></i></a>
         <a href="https://www.instagram.com/tooleycafe/" class="w3-button w3-black"><i class="fa fa-instagram"></i></a>
     </div>
-      <p>Created by | <a href="https://www.linkedin.com/in/harry-paolella-722723266/?originalSubdomain=uk" title="Harry Linkdin" target="_blank" class="w3-hover-text-green">Harry Paolella</a></p>
+      <p>Created by | <a href="https://www.linkedin.com/in/harry-paolella-722723266/?originalSubdomain=uk" title="Harry Linkedin" target="_blank" class="w3-hover-text-green">Harry Paolella</a></p>
     </div>
 
  
